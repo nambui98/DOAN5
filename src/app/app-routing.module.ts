@@ -47,6 +47,15 @@ const routes: Routes = [
     path: paths.contact,
     component: ContactComponent,
   },
+  { path: paths.cart, component: CartComponent },
+  { path: paths.blog, component: BlogComponent },
+  { path: paths.checkout, component: CheckoutComponent },
+  { path: paths.confirmation, component: ConfirmationComponent },
+  { path: paths.elements, component: ElementsComponent },
+  { path: paths.login, component: LoginComponent },
+  { path: paths.singleBlog, component: SingleBlogComponent },
+  { path: paths.singleProduct, component: SingleProductComponent },
+  { path: paths.tracking, component: TrackingComponent },
   {
     path: '**',
     resolve: {
@@ -54,19 +63,6 @@ const routes: Routes = [
     },
     component: NotFoundComponent,
   },
-  // { path: 'home', component: HomeComponent },
-  // { path: 'shop', component: ShopCategoryComponent },
-  // { path: 'cart', component: CartComponent },
-  // { path: 'blog', component: BlogComponent },
-  // { path: 'checkout', component: CheckoutComponent },
-  // { path: 'confirmation', component: ConfirmationComponent },
-  // { path: 'contact', component: ContactComponent },
-  // { path: 'elements', component: ElementsComponent },
-  // { path: 'login', component: LoginComponent },
-  // { path: 'single-blog/:id', component: SingleBlogComponent },
-  // { path: 'single-product/:id', component: SingleProductComponent },
-  // { path: 'tracking', component: TrackingComponent },
-  // { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
