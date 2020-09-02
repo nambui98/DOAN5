@@ -1,4 +1,6 @@
 import { Component, OnInit, Renderer2, AfterViewInit } from '@angular/core';
+declare var $: any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,8 +10,23 @@ export class AppComponent implements OnInit, AfterViewInit {
   title = 'Aranoz';
   products: any;
   menus: any;
-  constructor(private renderer: Renderer2) {}
-  ngOnInit() {}
+  isHomePage: any;
+  constructor(private renderer: Renderer2) {
+    this.isHomePage =
+      window.location.pathname === '/home' || '/' ? true : false;
+    console.log(this.isHomePage);
+  }
+  ngOnInit() {
+    this.isHomePage =
+      window.location.pathname === '/home' || '/' ? true : false;
+    // console.log($('.banner_slider'));
+  }
+  onChangePage(value) {
+    console.log(value);
+
+    this.isHomePage = value === '/home' ? true : false;
+    console.log(this.isHomePage);
+  }
   ngAfterViewInit() {
     this.loadScripts();
   }

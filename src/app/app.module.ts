@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -16,7 +16,8 @@ import { SingleBlogComponent } from './single-blog/single-blog.component';
 import { SingleProductComponent } from './single-product/single-product.component';
 import { TrackingComponent } from './tracking/tracking.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-
+import { OwlCarouselDemoComponent } from './owl-carousel-demo/owl-carousel-demo.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,8 +34,14 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SingleProductComponent,
     TrackingComponent,
     NotFoundComponent,
+    OwlCarouselDemoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    CarouselModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
