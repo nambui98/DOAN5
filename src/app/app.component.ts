@@ -10,23 +10,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   title = 'Aranoz';
   products: any;
   menus: any;
-  isHomePage: any;
-  constructor(private renderer: Renderer2) {
-    this.isHomePage =
-      window.location.pathname === '/home' || '/' ? true : false;
-    console.log(this.isHomePage);
-  }
-  ngOnInit() {
-    this.isHomePage =
-      window.location.pathname === '/home' || '/' ? true : false;
-    // console.log($('.banner_slider'));
-  }
-  onChangePage(value) {
-    console.log(value);
-
-    this.isHomePage = value === '/home' ? true : false;
-    console.log(this.isHomePage);
-  }
+  constructor(private renderer: Renderer2) {}
+  ngOnInit() {}
+  onChangePage(value) {}
   ngAfterViewInit() {
     this.loadScripts();
   }

@@ -1,0 +1,15 @@
+<owl-carousel-o navElement="best_product_slider" [options]="customOptions">
+  <ng-container *ngFor="let slide of slidesStore">
+    <ng-template carouselSlide>
+      <!-- <app-product [product]="slide"></app-product>
+       -->
+      <div class="single_product_item">
+        <img src="{{ slide.src }}" alt="" />
+        <div class="single_product_text">
+          <h4>{{ slide.title }}</h4>
+          <h3>$150.00</h3>
+        </div>
+      </div>
+    </ng-template>
+  </ng-container>
+</owl-carousel-o>
